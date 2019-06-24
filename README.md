@@ -25,11 +25,10 @@ learning note of operating system from PeKing University
 必须随时对以不可预见的次序发生的事件进行响应并处理。<br>
 ### 典型操作系统的架构
 * windows架构
-![imgae]
-(https://github.com/sjtujw/os_learning_note/raw/master/img/structure_windos.png)
+![imgae](https://github.com/sjtujw/os_learning_note/tree/master/img/structure_windos.jpg)
 * UNIX架构
-(https://github.com/sjtujw/os_learning_note/raw/master/img/structure_unix.png)
+![image](https://github.com/sjtujw/os_learning_note/tree/master/img/structure_unix.jpg)
 * LINUX架构
-(https://github.com/sjtujw/os_learning_note/raw/master/img/structure_linux.png)
+![image](https://github.com/sjtujw/os_learning_note/tree/master/img/structure_linux.jpg)
 * Android架构
-(https://github.com/sjtujw/os_learning_note/raw/master/img/structure_android.png)
+![image](https://github.com/sjtujw/os_learning_note/tree/master/img/structure_android.jpg)
