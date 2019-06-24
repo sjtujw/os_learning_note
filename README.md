@@ -32,3 +32,13 @@ learning note of operating system from PeKing University
 ![structure_linux](https://github.com/sjtujw/os_learning_note/raw/master/img/structure_linux.jpg)
 * Android架构
 ![structure_android](https://github.com/sjtujw/os_learning_note/raw/master/img/structure_android.jpg)
+### SPOOLING系统
+* Simultaneous Peripheral Operation On-line
+* 思想：<br>
+利用磁盘做缓冲，将输入、计算、输出分别组织成独立的任务流，使I/O和计算真正并行。
+* 工作原理
+    - 用户作业加载到磁盘上的输入井；
+    - 按某种调度策略选择几个搭配得当的作业，调入内存；
+    - 作业运行的结果输出到磁盘上的输出井；
+    - 运行结果从磁盘上的输出井送到打印机。
+![spooling]((https://github.com/sjtujw/os_learning_note/raw/master/img/spooling.jpg))
