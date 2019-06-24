@@ -11,3 +11,9 @@ learning note of operating system from PeKing University
 * 文件管理<br>
 * 设备管理<br>
 * 用户接口<br>
+### OS的特征
+* 并发<br>
+&#8194并发：处理多个同时性活动的能力<br>
+&#8194并行：多指不同程序同时在多个硬件部件上执行
+* 共享<br>
+&#8194
