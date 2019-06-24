@@ -41,4 +41,4 @@ learning note of operating system from PeKing University
     - 按某种调度策略选择几个搭配得当的作业，调入内存；
     - 作业运行的结果输出到磁盘上的输出井；
     - 运行结果从磁盘上的输出井送到打印机。<br>
-![spooling]((https://github.com/sjtujw/os_learning_note/raw/master/img/spooling.jpg))
+![spooling](https://github.com/sjtujw/os_learning_note/raw/master/img/spooling.jpg)
