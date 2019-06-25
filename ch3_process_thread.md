@@ -28,8 +28,7 @@ learning note of operating system from PeKing University
 - 七状态模型
     创建、就绪、阻塞、就绪挂起、阻塞挂起、运行、退出<br>
     ![seven_state](https://github.com/sjtujw/os_learning_note/raw/master/img/seven_state.jpg)
-<br>
-- linux状态示意图<br>
+- linux状态示意图
     ![linux_state](https://github.com/sjtujw/os_learning_note/raw/master/img/linux_state.jpg)
 #### 进程队列
 - 操作系统为每一类进程建立一个或多个队列
