@@ -21,7 +21,7 @@ learning note of operating system from PeKing University
 * 中断向量：一个内存单元，存放中断处理程序入口地址和程序运行时所需的处理机状态字。
 ![中断向量表](https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_list.jpg)
 * 中断响应示意图
-![中断响应示意图]((https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_response.jpg))
+![中断响应示意图](https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_response.jpg)
 * 举例：X86处理器（待补充）
 ### 系统调用机制
 1. 定义：用户在编程时可以调用的操作系统功能
