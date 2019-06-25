@@ -28,9 +28,8 @@ learning note of operating system from PeKing University
 - 七状态模型
     创建、就绪、阻塞、就绪挂起、阻塞挂起、运行、退出<br>
     ![seven_state](https://github.com/sjtujw/os_learning_note/raw/master/img/seven_state.jpg)
-<br>
 - linux状态示意图<br>
-    ![linux_state](https://github.com/sjtujw/os_learning_note/raw/master/img/linux_state.jpg)
+![linux_state](https://github.com/sjtujw/os_learning_note/raw/master/img/linux_state.jpg)
 #### 进程队列
 - 操作系统为每一类进程建立一个或多个队列
 - 队列元素为PCB
@@ -66,5 +65,39 @@ learning note of operating system from PeKing University
     - 一个程序可能有多个进程；进程可以创建进程
 * 进程地址空间<br>
     ![address_expla](https://github.com/sjtujw/os_learning_note/raw/master/img/address_expla.jpg)
+* 上下文（context）切换
+    - 定义：将CPU硬件状态从一个进程切换到另一个进程的过程
+    - 进程运行时，其硬件状态保存在CPU的寄存器中，主要是（程序计数器PC，程序状态寄存器PSW，栈指针，通用寄存器，其他控制寄存器）
+    - 进程不运行时，寄存器值保存在PCB中，运行时送入相应寄存器
+#### 进程小结
+![summary_of_process](https://github.com/sjtujw/os_learning_note/raw/master/img/address_expla.jpg)
+### 线程
+#### 概念
+进程中的一个运行实体，是CPU的调度单位。进程仍然拥有资源，但线程是现在的CPU调度单位。
+#### 属性
+* 有标识符ID
+* 有状态及状态转换 ——> 需要提供操作
+* 不运行时需要保存上下文，上下文环境指：程序计数器等寄存器
+* 有自己的栈和栈指针
+* 共享所在进程的地址空间和其他资源
+* 可以创建、撤销另一个线程
+#### 线程的实现
+* 用户级线程（主动让出CPU资源）
+    - 优点
+    1. 线程切换快
+    2. 调度算法时应用程序特定的
+    3. 用户级线程可运行在任何操作系统上（只需实现线程库）
+    - 缺点
+    1. 内核只将处理器分配给进程，同进程的线程不能运行于多个CPU上
+    2. 大多数系统调用是阻塞的，由于内核阻塞进程，所有线程也会被阻塞
+* 核心级线程（如，Windows）
+    - 内核管理所有线程，并向应用程序提供API接口
+    - 内核维护进程和线程的上下文
+    - 线程的切换需要内核支持
+    - 以线程为基础进行调度
+* 混合模型（Solaris）
+    - 线程创建在用户空间
+    - 线程调度在核心态完成
+    
 
 
