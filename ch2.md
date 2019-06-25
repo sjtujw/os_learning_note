@@ -22,17 +22,17 @@ learning note of operating system from PeKing University
 ![中断向量表](https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_list.jpg)
 * 中断响应示意图<br>
 ![中断响应示意图](https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_response.jpg)
-* 举例：X86处理器（待补充）
-* 中断处理流程举例
+* 举例：X86处理器（待补充）<br>
+* 中断处理流程举例<br>
 ![中断处理流程](https://github.com/sjtujw/os_learning_note/raw/master/img/Interrupt_procedure.jpg)
 ### 系统调用机制
 1. 定义：用户在编程时可以调用的操作系统功能
 2. 描述：操作系统给编程人员的唯一接口，使CPU状态从用户态陷入内核态；每个操作系统提供几百种系统调用（进程控制、进程通信、文件使用、目录操作、设备管理、信息维护等）
 3. 参数传递：
-    (1). 由陷入指令自带参数：陷入指令长度有限，且要携带系统调用功能号，只能自带有限的参数。
-    (2). 通过通用寄存器传递参数：共用寄存器，但寄存器个数会限制传递参数的数量。
-    (3). 在内存中开辟专用堆栈区来传递参数。
-4. 系统调用的执行过程：
+    (1). 由陷入指令自带参数：陷入指令长度有限，且要携带系统调用功能号，只能自带有限的参数。<br>
+    (2). 通过通用寄存器传递参数：共用寄存器，但寄存器个数会限制传递参数的数量。<br>
+    (3). 在内存中开辟专用堆栈区来传递参数。<br>
+4. 系统调用的执行过程：<br>
     当CPU执行到特殊的陷入指令时：
     - 中断/异常机制：硬件保护现场，查表，返回中断处理程序入口地址；
     - 系统调用总入口程序：保存现场；保存参数在内核堆栈里；通过查表把控制权交给系统调用处理函数或者内核；
