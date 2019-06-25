@@ -36,18 +36,18 @@ learning note of operating system from PeKing University
 - 队列元素为PCB
 - 随着进程状态变化，其PCB从一个队列进入另一个队列
 #### 进程控制
-* 进程的创建<br>
+- 进程的创建<br>
 给新进程分配一个唯一标识以及进程控制块；为进程分配地址空间；初始化PCB；设置对应的队列指针
-* 进程的撤销<br>
+- 进程的撤销<br>
 收回进程占用的资源（关闭打开的文件、断开网络连接、回收分配的内存）；撤销该进程的PCB
-* 进程阻塞<br>
+- 进程阻塞<br>
 处于运行状态的进程，等待事件发生。当被等待的事件未发生时，进程自己执行阻塞，切换至阻塞态
-* UNIX的几个进程控制操作
+- UNIX的几个进程控制操作
     - fork()：复制调用进程来创建新的进程
     - exec()：新程序代码覆盖原来的地址空间，实现进程执行代码的转换
     - wait()：使一个进程等另一个进程结束
     - exit()：终止一个进程
-* 例：UNIX下fork（）的实现
+- 例：UNIX下fork（）的实现
     - 为子进程分配一个空闲的进程描述符
     - 分配给子进程唯一标识 pid
     - 以一次一页的方式复制父进程地址空间（linux时改进，copy-on-write）
@@ -55,16 +55,16 @@ learning note of operating system from PeKing University
     - 将子进程的状态设为就绪，插入到就绪队列
     - 对子进程返回标识符 0
     - 向父进程返回子进程的 pid
-* pid
+- pid
     父进程的pid为子进程创建的pid号，一般不为0；子进程的pid为0。
 #### 进程进一步讨论
-* 分类
+- 分类
     系统进程和用户进程、前台进程和后台进程、CPU密集型进程和I/O密集型进程
-* 和程序的区别
+- 和程序的区别
     - 程序是静态的，进程是动态的
     - 进程有生命周期，是短暂的；程序是相对长久的
     - 一个程序可能有多个进程；进程可以创建进程
-* 进程地址空间<br>
+- 进程地址空间<br>
     ![address_expla](https://github.com/sjtujw/os_learning_note/raw/master/img/address_expla.jpg)
 
 
