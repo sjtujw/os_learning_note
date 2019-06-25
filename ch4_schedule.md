@@ -48,7 +48,21 @@ learning note of operating system from PeKing University
     ![fcfs1](https://github.com/sjtujw/os_learning_note/raw/master/img/fcfs1.jpg)
     ![fcfs2](https://github.com/sjtujw/os_learning_note/raw/master/img/fcfs2.jpg)
 * 最短作业优先（SJF-Shortest Job First）
-
+    - 具有最短完成时间的进程优先执行
+    - 非抢占式
+    - 优缺点：最短的平均周转时间、不公平（长的任务长时间得不到运行，starvation）
 * 最短剩余时间优先（SRTN-Shortest Remaining Time Next）
+    - SJF的抢占式算法
+    - 例
+    ![sjf](https://github.com/sjtujw/os_learning_note/raw/master/img/sjf.jpg)
 * 最高相应比优先（HRRN-Highest Response Ratio Next）
+    - 调度时，首先计算每个进程的响应比R；之后，选择R最高的进程执行
+    - R = 周转时间/处理时间<br>
+        = （处理时间+等待时间）/处理时间<br>
+        = 1+（等待时间/处理时间）<br>
+### 交互式系统的调度算法
+* 轮转调度（RR-Round Robin）
+* 最高优先级调度（HPF—Highest Priority First）
+* 多级反馈队列（Multiple feedback queue）
+* 最短进程优先（Shortest Process Next）
 
