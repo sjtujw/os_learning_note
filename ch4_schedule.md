@@ -24,17 +24,18 @@ learning note of operating system from PeKing University
     - 切换的具体步骤<br>
     ![process_of_switch](https://github.com/sjtujw/os_learning_note/raw/master/img/process_of_switch.jpg)
     - 切换的开销<br>
-直接开销：内核完成切换所用的CPU时间（保存和恢复寄存器、切换地址空间）；间接开销：高速缓存、缓冲区缓存和TLB（translation Look-aside Buffer）失效
+直接开销：内核完成切换所用的CPU时间（保存和恢复寄存器、切换地址空间）；<br>
+间接开销：高速缓存、缓冲区缓存和TLB（translation Look-aside Buffer）失效
 ### 调度算法要点
-* 进程优先级（数）
+* 进程优先级（数）<br>
 静态优先级和动态优先级
-* 进程就绪队列组织
+* 进程就绪队列组织<br>
 按优先级、按照先后顺序
-* 抢占和非抢占
+* 抢占和非抢占<br>
 指的是占用CPU的方式，抢占指可强行剥夺正在运行进程的CPU，分配给优先级更高的进程。
-* I/O密集型与CPU密集型
+* I/O密集型与CPU密集型<br>
 前者频繁进行I/O，大量的等待时间；后者大量的CPU计算时间
-* 时间片
+* 时间片<br>
 一个时间段，分配给调度上CPU的进程，确定了允许该进程运行的时间长度。<br>
 如何选择：进程切换的开销；对响应时间的要求；就绪进程个数；CPU能力；进程的行为。<br>
 ### 批处理系统的调度算法
