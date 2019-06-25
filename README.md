@@ -1,6 +1,6 @@
 # os_learning_note
 learning note of operating system from PeKing University
-## CH1 操作系统概述
+## ch1 操作系统概述
 ### 操作系统的三个作用
 * 资源的管理者<br>
 * 向用户提供各种服务<br>
