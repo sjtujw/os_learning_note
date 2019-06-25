@@ -7,11 +7,11 @@ learning note of operating system from PeKing University
 #### 要解决的问题
 * 调度算法
     - 指标<br>
-    吞吐量throughout————每单位时间完成的进程数目
-    周转时间TT（Turnaround Time）————每个进程从提出请求到运行完成的时间
-    响应时间RT（Response Time）————从提出请求到第一次回应的时间
-    CPU利用率（CPU Utilization）————CPU做有效工作的时间比例
-    等待时间（Waiting Time）————每个进程在就绪队列中等待的时间
+    吞吐量throughout————每单位时间完成的进程数目<br>
+    周转时间TT（Turnaround Time）————每个进程从提出请求到运行完成的时间<br>
+    响应时间RT（Response Time）————从提出请求到第一次回应的时间<br>
+    CPU利用率（CPU Utilization）————CPU做有效工作的时间比例<br>
+    等待时间（Waiting Time）————每个进程在就绪队列中等待的时间<br>
 * 调度时机
     - 进程正常终止 或 由于某种错误终止
     - 新进程创建 或 一个等待进程变为就绪
