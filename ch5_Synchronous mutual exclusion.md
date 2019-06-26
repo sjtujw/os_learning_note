@@ -39,7 +39,7 @@ learning note of operating system from PeKing University
 * 用P、V操作解决进程间互斥问题
     ![pv_mutex](https://github.com/sjtujw/os_learning_note/raw/master/img/pv_mutex.jpg)
 * 用Semaphore解决生产者/消费者问题
-    ![Sema_cons_produ1](https://github.com/sjtujw/os_learning_note/raw/master/img/sema_cons_produ1.jpg)
-    ![Sema_cons_produ2](https://github.com/sjtujw/os_learning_note/raw/master/img/sema_cons_produ2.jpg)
+    ![Sema_cons_produ](https://github.com/sjtujw/os_learning_note/raw/master/img/Sema_cons_produ.jpg)
+    ![Sema_cons_produ2](https://github.com/sjtujw/os_learning_note/raw/master/img/Sema_cons_produ2.jpg)
 * 读者/写者问题
     ![reader&writer](https://github.com/sjtujw/os_learning_note/raw/master/img/reader_writer.jpg)
