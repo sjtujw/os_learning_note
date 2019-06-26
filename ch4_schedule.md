@@ -55,14 +55,31 @@ learning note of operating system from PeKing University
     - SJF的抢占式算法
     - 例
     ![sjf](https://github.com/sjtujw/os_learning_note/raw/master/img/sjf.jpg)
-* 最高相应比优先（HRRN-Highest Response Ratio Next）
+* 最高响应比优先（HRRN-Highest Response Ratio Next）
     - 调度时，首先计算每个进程的响应比R；之后，选择R最高的进程执行
     - R = 周转时间/处理时间<br>
         = （处理时间+等待时间）/处理时间<br>
         = 1+（等待时间/处理时间）<br>
 ### 交互式系统的调度算法
 * 轮转调度（RR-Round Robin）
+    - 思路：周期性切换，每个进程分配一个时间片，时钟中断——>轮换
+    - 优缺点：公平、有利于交互式计算，响应快、开销较大
+    - 对不同大小的进程有利，对相同大小的进程性能差
 * 最高优先级调度（HPF—Highest Priority First）
+    - 通常：系统进程优先级 高于 用户进程；前台进程优先级 高于 后台进程；I/O优先级一般较高
+    - 实现简单、不公平
+    - 优先级反转问题：低优先级进程持有高优先级进程的资源，使得高优先级进程等待<br>
+    影响：系统错误；高优先级进程停滞，导致系统性能降低<br>
+    解决方案：设置优先级上限；优先级继承；使用中断禁止<br>
 * 多级反馈队列（Multiple feedback queue）
+![mfq](https://github.com/sjtujw/os_learning_note/raw/master/img/mfq.jpg)
 * 最短进程优先（Shortest Process Next）
+### 各种调度算法的比较
+![comparison](https://github.com/sjtujw/os_learning_note/raw/master/img/comparison.jpg)
+### 典型操作系统采用的调度算法
+* UNIX 动态优先数法
+* 5.3BSD 多级反馈队列法
+* Linux 抢占式调度
+* Windows 基于优先级的抢占式多任务调度
+* Solaris 综合调度算法
 
