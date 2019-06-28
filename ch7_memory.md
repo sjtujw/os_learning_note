@@ -47,13 +47,52 @@ learning note of operating system from PeKing University
     - 碎片问题：<br>
     紧缩技术（压缩技术、紧致技术、搬家技术）：在内存移动程序，将所有小的空闲区合并成大的空闲区
 * 页式
+    - 逻辑地址
+    ![page_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/page_memory.jpg)
     - 用户进程地址空间被划分为大小相等的部分，称为页（page）或页面，从0开始编号；内存空间同样划分，称为页框，也叫物理页面，页帧，内存块；
     - 内存分配规则：以页为单位进行分配，并按进程需要的页数来分配；逻辑上相邻的页，物理上不一定相邻，常见4K、4M。
     - 相关数据结构及地址转换<br>
         + 页表项：记录了逻辑页号与页框号的对应关系<br>
         + 每个进程一个页表，存放在内存<br>
+        + 空闲内存管理
         + 地址转换<br>
         CPU取到逻辑地址，自动划分为页号和页内地址；用页号查页表，得到页框号，再与页内偏移拼接成为物理地址
 * 段式
-* 段页式
+    - 逻辑地址
+    ![segment_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/segment_memory.jpg)
+    - 用户进程地址空间：按程序自身逻辑划分为若干个程序段；内存空间：动态划分为若干长度不同的区域，称为物理段，由起始地址和长度两个参数；段为基本单位，段内空间连续，各段可以不相邻。
+    - 相关数据结构及地址转换
+        + 段表：记录段号、段首地址和段长度之间的关系；每个进程一个段表
+        + 地址转换<br>
+        CPU取到逻辑地址，用段号查段表，得到该段在内存的起始地址，与段内偏移地址计算出物理地址
+* 段页式<br>
+    综合段式和页式方案的优点，客服两者缺点
+    - 先按段划分，每一段再按页面划分
+    - 逻辑地址<br>
+    ![segpage_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/segpage_memory.jpg)
+    - 内存划分：同页式存储管理方案（系统自动完成）
+    - 内存分配：以页为单位进行分配
+    - 相关数据结构及地址转换
+        + 每一段有一张页表，一个进程有多个页表
+        + 空闲区管理：同页式（空闲内存管理）
+        + 内存分配、回收：同页式
+        + 地址转换<br>
+        ![segpage_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/segpage_memory.jpg)
+* 基本内存管理方案小结
+![memory_manag_summary](https://github.com/sjtujw/os_learning_note/raw/master/img/memory_manag_summary.jpg)
 #### 交换技术（swapping）
+* 内存扩充技术
+    - 内存紧缩技术（例如：可变分区）
+    - 覆盖技术overlaying（早期操作系统）
+        + 解决的问题 → 程序大小超过物理内存总和
+        + 程序执行过程中，程序的不同部分在内存中相互替代<br>
+        按照其自身的逻辑结构，将那些不会同时执行的程序段共享同一块内存区域<br>
+        要求程序各模块之间有明确的调用结构<br>
+        + 程序员声明覆盖结构，操作系统完成自动覆盖
+        + 对用户不透明，增加了用户负担
+    - 交换技术swapping（内存交换）
+        + 交换的内容：运行时创建或修改的内容————栈和堆
+        + 制定特殊区域作为交换空间，底层的磁盘速写操作加快速度
+        + 交换时机：只要不用或者很少再用；内存不够或者有不够的危险时
+        + 交换对象：考虑进程的各种属性；不应交换出处于等待I/O状态的进程
+    - 虚拟存储技术virtual memory
