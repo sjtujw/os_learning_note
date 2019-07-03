@@ -23,7 +23,7 @@ FROM table_name<br>
 [WHERE Clause]<br>
 [OFFSET M ][LIMIT N]<br>
 * where子句：<br>
-    - binary来区分大小写
+    - binary来区分大小写<br>
 SELECT field1, field2,...fieldN FROM table_name1, table_name2...<br>
 [WHERE condition1 [AND [OR]] condition2.....<br>
 ![](https://github.com/sjtujw/os_learning_note/raw/master/mysql/img/use_of_where.jpg)
