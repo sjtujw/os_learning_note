@@ -23,10 +23,21 @@ FROM table_name<br>
 [WHERE Clause]<br>
 [OFFSET M ][LIMIT N]<br>
 * where子句：<br>
+    - binary来区分大小写
 SELECT field1, field2,...fieldN FROM table_name1, table_name2...<br>
 [WHERE condition1 [AND [OR]] condition2.....<br>
 ![](https://github.com/sjtujw/os_learning_note/raw/master/mysql/img/use_of_where.jpg)
 * update子句：<br>
 UPDATE table_name SET field1=new-value1, field2=new-value2<br>
-[WHERE Clause]
+[WHERE Clause]<br>
 ![](https://github.com/sjtujw/os_learning_note/raw/master/mysql/img/updata_usage.jpg)
+* delete子句：<br>
+DELETE FROM table_name [WHERE Clause]<br>
+![](https://github.com/sjtujw/os_learning_note/raw/master/mysql/img/delete_usage.jpg)
+* Like子句：<br>
+    - Like可以替代=
+    - 通常与%一同使用，类似于一个元字符的搜索<br>
+SELECT field1, field2,...fieldN <br>
+FROM table_name1, table_name2...<br>
+WHERE field1 LIKE condition1 [AND [OR]] filed2 = 'somevalue'<br>
+![](https://github.com/sjtujw/os_learning_note/raw/master/mysql/img/like_usage.jpg)
