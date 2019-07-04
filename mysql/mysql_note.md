@@ -1,4 +1,9 @@
 # mysql常用语句及示例
+## 从mysql镜像创建容器
+1. docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=jw123 -d mysql:latest
+2. docker exec -ti mysql bash
+3. mysql -uroot -p
+## mysql命令
 * 连接：mysql -u root -p
 * 创建数据库：mysqladmin -u root -p create DBname
 * 删除数据库：mysqladmin -u root -p drop DBname
