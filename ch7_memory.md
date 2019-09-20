@@ -47,7 +47,7 @@ learning note of operating system from PeKing University
     - 碎片问题：<br>
     紧缩技术（压缩技术、紧致技术、搬家技术）：在内存移动程序，将所有小的空闲区合并成大的空闲区
 * 页式
-    - 逻辑地址
+    - 逻辑地址<br>
     ![page_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/page_memory.jpg)
     - 用户进程地址空间被划分为大小相等的部分，称为页（page）或页面，从0开始编号；内存空间同样划分，称为页框，也叫物理页面，页帧，内存块；
     - 内存分配规则：以页为单位进行分配，并按进程需要的页数来分配；逻辑上相邻的页，物理上不一定相邻，常见4K、4M。
@@ -58,7 +58,7 @@ learning note of operating system from PeKing University
         + 地址转换<br>
         CPU取到逻辑地址，自动划分为页号和页内地址；用页号查页表，得到页框号，再与页内偏移拼接成为物理地址
 * 段式
-    - 逻辑地址
+    - 逻辑地址<br>
     ![segment_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/segment_memory.jpg)
     - 用户进程地址空间：按程序自身逻辑划分为若干个程序段；内存空间：动态划分为若干长度不同的区域，称为物理段，由起始地址和长度两个参数；段为基本单位，段内空间连续，各段可以不相邻。
     - 相关数据结构及地址转换
@@ -79,7 +79,10 @@ learning note of operating system from PeKing University
         + 地址转换<br>
         ![segpage_memory](https://github.com/sjtujw/os_learning_note/raw/master/img/segpage_memory.jpg)
 * 基本内存管理方案小结
-![memory_manag_summary](https://github.com/sjtujw/os_learning_note/raw/master/img/memory_manag_summary.jpg)
+    ![memory_manag_summary](https://github.com/sjtujw/os_learning_note/raw/master/img/memory_manag_summary.jpg)
+* 分段式存储管理和分页式存储管理的区别<br>
+    - 页是信息的物理单位，分页是为实现离散分配方式（出于系统管理的需要），页的大小固定且由系统确定，一个系统只能有一种大小的页面。
+    - 段是信息的逻辑单位，含有一组意义相对完整的信息。段的长度不固定，取决于用户所编写的程序。
 #### 交换技术（swapping）
 * 内存扩充技术
     - 内存紧缩技术（例如：可变分区）
